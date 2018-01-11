@@ -1,0 +1,67 @@
+/* 清除浮动 */
+.clearfix:after{
+	content: ".";
+	display: block;
+	clear: both;
+	height: 0;
+	overflow: hidden;
+	visibility: hidden;
+}
+page{
+  width: 100%;
+  height: 100%;
+}
+.detail{
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+  font-size: 16px;
+  color: #74848c;
+}
+.detail .title{
+  width: 100%;
+  line-height: 40rpx; 
+  padding: 30rpx 0;
+  border-bottom: 2rpx solid #ccc; 
+  font-size: 17px;
+  letter-spacing: 2rpx;
+  font-weight: 700;
+  color: #1bbc9b;
+}
+.detail .date{
+  width: 100%;
+  height: 80rpx; 
+  line-height: 80rpx; 
+}
+.detail .date view{
+  display: inline-block;
+}
+.detail .date .time{
+  float: right;
+}
+.detail .continer{
+  width: 100%;
+  line-height: 50rpx;
+  letter-spacing: 2rpx;
+}
+.detail .btn{
+  position: fixed;
+  bottom: 40rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 100rpx;
+}
+.edit,.del{
+  display: inline-block;
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+}
+.detail .btn .edit{
+  background: #1bbc9b;
+}
+.detail .btn .del{
+  float: right;
+  background: #e97f6a;
+}

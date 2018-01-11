@@ -1,0 +1,16 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/edit/edit",
+    "pages/index/index",
+    "pages/addCgi/addCgi",
+    "pages/detail/detail"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#1bbc9b",
+    "navigationBarTitleText": "noteBook",
+    "navigationBarTextStyle": "white"
+  }
+}

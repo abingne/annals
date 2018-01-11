@@ -1,0 +1,15 @@
+<!--pages/edit/edit.wxml-->
+ <view class="edit" wx:if='{{editlist.length}}'>
+  <form bindsubmit="formSubmit" wx:for='{{editlist}}' wx:key='content'>
+    <input class="title" type="tetx" placeholder="这是笔记的标题" name="title" value='{{item.title}}' />
+    <textarea class="detail" placeholder="写下你的想法" cursor-spacing="300rpx" maxlength="-1" name="continer" value='{{item.content}}' />
+    <button class="btn" type="primary" form-type="submit">保存你的想法</button>
+  </form>
+</view> 
+<view class="edit" wx:else>
+  <form bindsubmit="formSubmit">
+    <input class="title" type="tetx" placeholder="这是笔记的标题" name="title" />
+    <textarea class="detail" placeholder="写下你的想法" cursor-spacing="300rpx" maxlength="-1" name="continer" />
+    <button class="btn" type="primary" form-type="submit">保存你的想法</button>
+  </form>
+</view>

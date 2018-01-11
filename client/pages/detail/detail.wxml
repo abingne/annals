@@ -1,0 +1,13 @@
+<!--pages/detail/detail.wxml-->
+<view class='detail' wx:for='{{list}}' wx:key='{{content}}'>
+  <view class='title'>{{item.title}}</view>
+  <view class='date clearfix'>
+    <view>{{item.yearmonth}}</view>
+    <view class='time'>{{item.time}}</view>
+  </view>
+  <view class='continer'>{{item.content}}</view>
+  <view class='btn'>
+    <image src='../../../common/image/edit.png' class='edit' bindtap='bindedit'></image>
+    <image src='../../../common/image/del.png' class='del' bindtap='binddel'></image>
+  </view>
+</view>

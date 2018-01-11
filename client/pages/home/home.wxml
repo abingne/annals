@@ -1,0 +1,42 @@
+<view class='page'>
+  <!--头部及装饰  -->
+  <view class='top'>
+    <image src='../../../common/image/25062_wx.jpg' class='topimg'></image>
+    <view class='cover'>
+      <image src='{{userInfo.avatarUrl}}'></image>
+      <view class='adorn1'></view>
+      <view class='adorn2'></view>
+    </view>
+  </view>
+
+  <!-- 内容区域 -->
+  <scroll-view scroll-y='true' class='list'style='height:820rpx;' enable-back-to-top="true" wx:if='{{list.length}}'>
+    <block wx:for="{{list}}" wx:key="content">
+      <view class='listItem'>
+        <!-- 这层是正常显示的 -->
+        <view class='adrift' style="{{item.txtStyle}}" bindtouchstart='touchS' bindtouchmove='touchM' bindtouchend='touchE' bindtap='clickItem' data-index="{{index}}">
+          <icon type='waiting' size='25' class='timeicon' color='#1bbc9b'></icon>
+          <view class='itemcon'>
+            <view>
+              <text>{{item.yearmonth}}</text>
+              <text  class='time'>{{item.time}}</text>
+            </view>
+            <text class='conTitle'>{{item.title}}</text>
+            <text class='continer'>{{item.content}}</text>
+          </view>
+        </view>
+        <!-- 这是滑动后显示的 -->
+        <view class='hideItem'>
+          <view class='delItem' bindtap='delItem'  data-index="{{index}}">
+            <image src='../../../common/image/del.png' class='delican'></image>
+          </view>
+          <!-- <view class='editItem' bindtap='editItem' data-index="{{index}}">编辑</view> -->
+        </view>
+      </view>
+    </block>
+  </scroll-view>
+  <view wx:else class='prompt' bindtap='viewtop'>还没有已经记录的想法，点击添加</view>
+
+  <!-- 这是底部添加想法的按钮 -->
+  <image src='../../../common/image/edit.png' class='add' bindtap='viewtop'></image>
+</view>
