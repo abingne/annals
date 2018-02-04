@@ -83,6 +83,7 @@
   line-height: 46rpx;
   background: #fff;
   z-index: 9;
+  transition: .3s;
 }
 .timeicon{
   display: inline-block;
