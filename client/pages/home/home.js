@@ -117,15 +117,16 @@ Page({
     var itemstyle = "";
     
     
-    itemstyle = "transform: translateX(-100%)"; 
+    itemstyle = "transform: translateX(-100%);transition: 0.3s;"; 
     addList[index].itemstyle = itemstyle;
+    
     this.setData({
       list: addList
     });
-
+    addList.splice(index, 1);
     // 从获取的下标开始，删除数组中的一个元素
     setTimeout(function () { 
-      addList.splice(index, 1);
+      
       that.setData({
         list: addList
       });
