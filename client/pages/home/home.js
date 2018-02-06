@@ -123,10 +123,9 @@ Page({
     this.setData({
       list: addList
     });
-    addList.splice(index, 1);
     // 从获取的下标开始，删除数组中的一个元素
+    addList.splice(index, 1);
     setTimeout(function () { 
-      
       that.setData({
         list: addList
       });
@@ -134,7 +133,7 @@ Page({
         key: 'edit',
         data: that.data.list,
       });
-     },600);
+     },300);
     
     // 重新加载这个页面
     // wx.reLaunch({
