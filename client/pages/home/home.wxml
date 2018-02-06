@@ -12,7 +12,7 @@
   <!-- 内容区域 -->
   <scroll-view scroll-y='true' class='list'style='height:820rpx;' enable-back-to-top="true" wx:if='{{list.length}}'>
     <block wx:for="{{list}}" wx:key="content">
-      <view class='listItem'>
+      <view class='listItem' style='{{item.itemstyle}}'>
         <!-- 这层是正常显示的 -->
         <view class='adrift' style="{{item.txtStyle}}" bindtouchstart='touchS' bindtouchmove='touchM' bindtouchend='touchE' bindtap='clickItem' data-index="{{index}}">
           <icon type='waiting' size='25' class='timeicon' color='#1bbc9b'></icon>
