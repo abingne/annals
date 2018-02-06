@@ -72,6 +72,8 @@
   background: #fff;
   color: #74848c;
   z-index: 9;
+  
+  transition: .3s;
 }
 .list .listItem .adrift{
   position: absolute; 
