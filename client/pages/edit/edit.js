@@ -60,7 +60,7 @@ Page({
     nobject.content = event.detail.value.continer;
     nobject.yearmonth = ndata.getFullYear() + "年" + ndata.getMonth() + 1 + "月" + ndata.getDate() + "日";
     nobject.time = houre + ":" + minutes;
-    nobject.sort = addList.length + 1;
+    nobject.sort = new Date().getTime();
     console.log(nobject.sort);
     if (event.detail.value.title && event.detail.value.continer){
       // 将这个对象存入到本地缓存
