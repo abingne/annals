@@ -10,6 +10,7 @@ Page({
       //   yearmonth: "",
       //   time: "",
       //   txtStyle: "",
+      //   itemstyle: "",
       // },
     ],
     delBtnWidth: 70,   //这里的单位是rpx
@@ -107,24 +108,37 @@ Page({
   },
   delItem: function(e){
     console.log(this.data.list);
+    var that = this;
     // 获取需要删除的元素的下标
     var index = e.currentTarget.dataset.index;
     console.log(e.currentTarget.dataset.index);
     console.log(index);
     var addList = this.data.list;
-    // 从获取的下标开始，删除数组中的一个元素
-    addList.splice(index,1);
+    var itemstyle = "";
+    
+    
+    itemstyle = "transform: translateX(-100%)"; 
+    addList[index].itemstyle = itemstyle;
     this.setData({
-      liat: addList
+      list: addList
     });
-    wx.setStorage({
-      key: 'edit',
-      data: this.data.list,
-    });
+
+    // 从获取的下标开始，删除数组中的一个元素
+    setTimeout(function () { 
+      addList.splice(index, 1);
+      that.setData({
+        list: addList
+      });
+      wx.setStorage({
+        key: 'edit',
+        data: that.data.list,
+      });
+     },600);
+    
     // 重新加载这个页面
-    wx.reLaunch({
-      url: '../home/home',
-    });
+    // wx.reLaunch({
+    //   url: '../home/home',
+    // });
   },
   clickItem: function(e){
     // 获取当前点击项的下标
