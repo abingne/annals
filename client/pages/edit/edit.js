@@ -58,7 +58,7 @@ Page({
     // 将输入的内容和时间作为对象属性传入
     nobject.title = event.detail.value.title;
     nobject.content = event.detail.value.continer;
-    nobject.yearmonth = ndata.getFullYear() + "年" + ndata.getMonth() + 1 + "月" + ndata.getDate() + "日";
+    nobject.yearmonth = ndata.getFullYear() + "年" + (ndata.getMonth() + 1) + "月" + ndata.getDate() + "日";
     nobject.time = houre + ":" + minutes;
     nobject.sort = new Date().getTime();
     console.log(nobject.sort);

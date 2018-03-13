@@ -91,6 +91,9 @@
   float: left;
   margin-right: 20rpx;
 }
+.list .itemcon{
+  width: 100%;
+}
 .list .listItem .time{
   float: right;
 }
@@ -101,6 +104,7 @@
   color: #1bbc9b;
 }
 .list .listItem .continer{
+  height: 100rpx;
   overflow : hidden;
 	text-overflow: ellipsis;
   word-break: break-all;
